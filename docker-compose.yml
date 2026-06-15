@@ -33,7 +33,7 @@ services:
       db:
         condition: service_healthy
     command: >
-      sh -c "npx prisma migrate deploy && node dist/main.js"
+      sh -c "npx prisma db push && node dist/main.js"
     networks:
       - clinicsay-network
 
