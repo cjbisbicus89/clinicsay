@@ -1,7 +1,7 @@
 # ClinicSay - Script de inicio para Windows
 # Requiere Docker Desktop instalado y corriendo
 
-Write-Host "🏥 ClinicSay - Iniciando servicios..." -ForegroundColor Cyan
+Write-Host "[ClinicSay] Iniciando servicios..." -ForegroundColor Cyan
 
 # Verificar que Docker está corriendo
 Write-Host "Verificando Docker..." -ForegroundColor Yellow
@@ -54,7 +54,7 @@ while ($retryCount -lt $maxRetries) {
     }
 }
 
-Write-Host "`n🌐 Abriendo en el navegador:" -ForegroundColor Cyan
+Write-Host "`n>> Abriendo en el navegador:" -ForegroundColor Cyan
 Write-Host "  → http://localhost           (Frontend)" -ForegroundColor White
 Write-Host "  → http://localhost:3000/api/docs  (Swagger)" -ForegroundColor White
 Write-Host "  → http://localhost:3000           (API)" -ForegroundColor White
@@ -66,8 +66,8 @@ Start-Sleep -Milliseconds 600
 Start-Process "http://localhost:3000"
 
 if (-not $backendReady) {
-    Write-Host "`n⚠ El backend tardó más de lo esperado. Si las páginas no cargan, esperá unos segundos y recargá." -ForegroundColor Yellow
+    Write-Host "`n[!] El backend tardo mas de lo esperado. Si las paginas no cargan, espera unos segundos y recarga." -ForegroundColor Yellow
 }
 
-Write-Host "`n📊 Ver logs: docker-compose logs -f" -ForegroundColor Gray
-Write-Host "🛑 Detener:   docker-compose down" -ForegroundColor Gray
+Write-Host "`n[*] Ver logs: docker-compose logs -f" -ForegroundColor Gray
+Write-Host "[x] Detener:   docker-compose down" -ForegroundColor Gray
