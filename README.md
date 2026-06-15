@@ -24,7 +24,16 @@ Cuando la información crítica de un paciente está dispersa en notas o depende
 
 ## 🚀 Instalación rápida
 
-Solo necesitás tener **Docker Desktop** instalado y corriendo.
+**Requisito:** tener Docker Desktop instalado y corriendo.
+
+**Paso 1** — Cloná el repositorio y entrá a la carpeta:
+
+```bash
+git clone https://github.com/cjbisbicus89/clinicsay.git
+
+```
+
+**Paso 2** — Ejecutá el script según tu sistema operativo:
 
 ### Windows
 
