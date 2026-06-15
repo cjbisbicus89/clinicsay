@@ -1,0 +1,53 @@
+export const ALERT_MESSAGES = {
+  status: {
+    active: 'Activa',
+    inactive: 'Inactiva',
+  },
+  actions: {
+    activate: 'Activar',
+    deactivate: 'Desactivar',
+    edit: 'Editar',
+    delete: 'Eliminar',
+    create: 'Crear alerta',
+    save: 'Guardar cambios',
+    saving: 'Guardando…',
+    cancel: 'Cancelar',
+    retry: 'Reintentar',
+    close: 'Cerrar',
+  },
+  validation: {
+    messageMin: 'Mínimo 3 caracteres',
+    messageMax: 'Máximo 500 caracteres',
+  },
+  confirmDelete: '¿Eliminar esta alerta permanentemente?',
+  panelTitle: 'Alertas del paciente',
+  newAlert: 'Nueva alerta',
+  loading: 'Cargando alertas',
+  loadingSrOnly: 'Cargando alertas del paciente',
+  errorTitle: 'Error al cargar alertas',
+  errorFallback: 'Intenta de nuevo más tarde.',
+  emptyTitle: 'Sin alertas registradas',
+  emptyHint: 'Haz clic en "Nueva alerta" para agregar la primera.',
+  form: {
+    newTitle: 'Nueva alerta',
+    editTitle: 'Editar alerta',
+    typeLabel: 'Tipo',
+    severityLabel: 'Severidad',
+    messageLabel: 'Mensaje',
+    isActiveLabel: 'Alerta activa',
+  },
+  errorBoundaryTitle: 'Algo salió mal',
+  errorBoundaryHint: 'Recarga la página para continuar.',
+  patientRecord: {
+    title: 'Ficha médica del paciente',
+    tabs: {
+      data: 'Datos',
+      appointments: 'Citas',
+      alerts: 'Alertas',
+    },
+    placeholders: {
+      data: 'Información general del paciente.',
+      appointments: 'Historial de citas del paciente.',
+    },
+  },
+} as const

@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum AlertType {
+  ALLERGY
+  MEDICAL_RISK
+  SPECIAL_CONDITION
+  ADMINISTRATIVE
+}
+
+enum Severity {
+  LOW
+  MEDIUM
+  HIGH
+}
+
+model PatientAlert {
+  id        String    @id @default(uuid()) @db.Uuid
+  patientId String    @db.Uuid
+  type      AlertType
+  severity  Severity
+  message   String    @db.VarChar(500)
+  isActive  Boolean   @default(true)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([patientId, isActive])
+}
